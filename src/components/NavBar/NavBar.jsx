@@ -5,6 +5,7 @@ import "./NavBar.css";
 import Menu from './img/menu.png';
 import Close from './img/close.png';
 
+import Home from './img/home.png'
 import Historic from './img/historic.png';
 import Image from './img/image.png';
 import User from './img/user.png'
@@ -56,15 +57,15 @@ function Navbar() {
             <div>
 
               <Link
-                to=""
+                to="/"
                 className="nav-button"
               >
-                <img className="icon-button" src={Historic} />
-                <h1>Histórico</h1>
+                <img className="icon-button" src={Home} />
+                <h1>Página Inicial</h1>
               </Link>
 
               <Link
-                to=""
+                to="/posts-denunciados"
                 className="nav-button"
               >
                 <img className="icon-button" src={Image} />
@@ -72,11 +73,19 @@ function Navbar() {
               </Link>
 
               <Link
-                to=""
+                to="/usuarios-denunciados"
                 className="nav-button"
               >
                 <img className="icon-button" src={User} />
                 <h1>Usuários Denuciados</h1>
+              </Link>
+
+              <Link
+                to="/historico"
+                className="nav-button"
+              >
+                <img className="icon-button" src={Historic} />
+                <h1>Histórico</h1>
               </Link>
 
             </div>
@@ -84,13 +93,13 @@ function Navbar() {
             <div className="exit-container">
 
               <Link
-                to=""
+                to="/login"
                 className="nav-button-exit"
               >
                 <img className="icon-button" src={Exit} />
                 <h1>Sair</h1>
               </Link>
-              
+
             </div>
 
           </div>

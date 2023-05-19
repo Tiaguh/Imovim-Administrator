@@ -5,7 +5,14 @@ export default function Main() {
   return (
     <div>
       <Navbar />
-      <h1>Main</h1>
+      <h1>Principal</h1>
+
+      <div>
+        <h1>Quantidades de posts denuncias</h1>
+        <h1>12</h1>
+      </div>
+
+
     </div>
   )
 }

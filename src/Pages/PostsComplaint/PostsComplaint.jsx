@@ -7,7 +7,7 @@ import PostsDenunciados from '../../components/PostsDenunciados/PostsDenunciados
 
 export default function PostsComplaint() {
   return (
-    <div>
+    <div className='posts-complaint-container'>
 
       <NavBar />
 
@@ -15,18 +15,34 @@ export default function PostsComplaint() {
 
       <div className="infos">
 
-        <h1>Denunciado</h1>
-        <h1>id_denunciado</h1>
+        <div className="id-denunciado-container">
+          <h1>id_denunciado</h1>
+        </div>
 
-        <h1>Motivo da denúncia</h1>
+        <div className="denunciado-container">
+          <h1>Denunciado</h1>
+        </div>
+
+        <div className="motivo-denuncia-container">
+          <h1>Motivo da denúncia</h1>
+        </div>
+
+        <div className="ocupar-espaco" />
 
       </div>
 
-      <PostsDenunciados 
-        denunciado = "Luis"
-        idDenunciado = "2"
-        motivoDenuncia = "NickName abusivo"
+      <PostsDenunciados
+        denunciado="Luis"
+        idDenunciado="2"
+        motivoDenuncia="NickName abusivo"
       />
+
+      <PostsDenunciados
+        denunciado="Luis"
+        idDenunciado="2"
+        motivoDenuncia="NickName abusivo"
+      />
+
     </div>
   )
 }

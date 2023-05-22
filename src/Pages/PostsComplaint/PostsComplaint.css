@@ -1,12 +1,58 @@
-.infos{
+.posts-complaint-container {
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.infos {
+    width: 95vw;
+
     display: flex;
     flex-direction: row;
-
-    gap: 20px;
+    align-self: center;
 }
 
 .infos h1 {
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 400;
+}
+
+.id-denunciado-container {
+    width: 25%;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: blue;
+}
+
+.denunciado-container {
+    width: 25%;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: yellow;
+}
+
+.motivo-denuncia-container {
+    width: 25%;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ocupar-espaco{
+    width: 25%;
+    height: 50px;
 }

@@ -2,46 +2,66 @@ import React from 'react';
 import './PostsComplaint.css';
 
 import NavBar from '../../components/NavBar/NavBar'
-import PostsDenunciados from '../../components/PostsDenunciados/PostsDenunciados';
-
 
 export default function PostsComplaint() {
   return (
-    <div className='posts-complaint-container'>
+    <div>
 
       <NavBar />
 
-      <h1>Posts Denunciados</h1>
+      <div className="posts-complaint-container">
 
-      <div className="infos">
+        <h1>Pendentes</h1>
 
-        <div className="id-denunciado-container">
-          <h1>id_denunciado</h1>
-        </div>
+        <table>
+          <tr className='title-table'>
+            <th>ID</th>
+            <th>Nickname</th>
+            <th>Motivo</th>
+            <th>Data de denúncia</th>
+            <th>Número de denúncias</th>
+            <th></th>
+          </tr>
 
-        <div className="denunciado-container">
-          <h1>Denunciado</h1>
-        </div>
+          <tr className='value-table'>
+            <td>04</td>
+            <td>Tiaguh_</td>
+            <td>Low Profile</td>
+            <td>12/06/2023</td>
+            <td>22</td>
+            <button>Ver Post</button>
+          </tr>
 
-        <div className="motivo-denuncia-container">
-          <h1>Motivo da denúncia</h1>
-        </div>
+          <tr className='value-table'>
+            <td>04</td>
+            <td>Tiaguh_</td>
+            <td>Low Profile</td>
+            <td>12/06/2023</td>
+            <td>22</td>
+            <button>Ver Post</button>
+          </tr>
 
-        <div className="ocupar-espaco" />
+          <tr className='value-table'>
+            <td>04</td>
+            <td>Tiaguh_</td>
+            <td>Low Profile</td>
+            <td>12/06/2023</td>
+            <td>22</td>
+            <button>Ver Post</button>
+          </tr>
+
+          <tr className='value-table'>
+            <td>04</td>
+            <td>Tiaguh_</td>
+            <td>Low Profile</td>
+            <td>12/06/2023</td>
+            <td>22</td>
+            <button>Ver Post</button>
+          </tr>
+
+        </table>
 
       </div>
-
-      <PostsDenunciados
-        denunciado="Luis"
-        idDenunciado="2"
-        motivoDenuncia="NickName abusivo"
-      />
-
-      <PostsDenunciados
-        denunciado="Luis"
-        idDenunciado="2"
-        motivoDenuncia="NickName abusivo"
-      />
 
     </div>
   )

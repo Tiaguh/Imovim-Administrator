@@ -5,10 +5,8 @@ import "./NavBar.css";
 import Menu from './img/menu.png';
 import Close from './img/close.png';
 
-import Home from './img/home.png'
 import Historic from './img/historic.png';
 import Image from './img/image.png';
-import User from './img/user.png'
 
 import Exit from './img/exit.png'
 
@@ -55,43 +53,50 @@ function Navbar() {
             </div>
 
             <div className="pessoal-info-container">
+
               <div className="img-container" >
                 <img className="img" src="https://firebasestorage.googleapis.com/v0/b/tcc-firebase-c1952.appspot.com/o/profileImage%2F1684366290357%2F0.9513496802173749?alt=media&token=4ec2f388-5173-41e4-8f73-409c1b90e852" />
               </div>
+
               <div className="name-container">
                 <h1>Luis</h1>
               </div>
-            </div>
-
-            <div>
-
-              <Link
-                to="/"
-                className="nav-button"
-              >
-                <img className="icon-button" src={Image} />
-                <h1>Pendentes</h1>
-              </Link>
-
-              <Link
-                to="/historico"
-                className="nav-button"
-              >
-                <img className="icon-button" src={Historic} />
-                <h1>Histórico</h1>
-              </Link>
 
             </div>
 
-            <div className="exit-container">
+            <div className="buttons-container">
 
-              <Link
-                to="/login"
-                className="nav-button-exit"
-              >
-                <img className="icon-button" src={Exit} />
-                <h1>Sair</h1>
-              </Link>
+              <div className="normal-buttons" >
+
+                <Link
+                  to="/"
+                  className="nav-button"
+                >
+                  <img className="icon-button" src={Image} />
+                  <h1>Pendentes</h1>
+                </Link>
+
+                <Link
+                  to="/historico"
+                  className="nav-button"
+                >
+                  <img className="icon-button" src={Historic} />
+                  <h1>Histórico</h1>
+                </Link>
+
+              </div>
+
+              <div className="exit-container">
+
+                <Link
+                  to="/login"
+                  className="nav-button-exit"
+                >
+                  <img className="icon-button" src={Exit} />
+                  <h1>Sair</h1>
+                </Link>
+
+              </div>
 
             </div>
 

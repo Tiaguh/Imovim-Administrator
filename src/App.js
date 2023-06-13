@@ -1,6 +1,6 @@
 import "./App.css"
 
-import PostsComplaint from "./Pages/PostsComplaint/PostsComplaint";
+import PostsPendent from "./Pages/PostsPendent/PostsPendent";
 import Historic from "./Pages/Historic/Historic";
 import Login from "./Pages/Login/Login"
 
@@ -12,7 +12,7 @@ export default function App() {
 
       <Router>
         <Routes>
-          <Route path="/" element={<PostsComplaint />} />
+          <Route path="/" element={<PostsPendent />} />
           <Route path="/historico" element={<Historic />} />
           <Route path="/login" element={<Login />} />
         </Routes>

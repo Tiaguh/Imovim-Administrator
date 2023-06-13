@@ -19,6 +19,13 @@
     overflow-y: hidden;
 }
 
+.post-complaint-title {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
 table {
     width: 100%;
 }

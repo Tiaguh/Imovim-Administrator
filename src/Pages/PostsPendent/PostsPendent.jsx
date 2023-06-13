@@ -1,9 +1,9 @@
 import React from 'react';
-import './PostsComplaint.css';
+import './PostsPendent.css';
 
 import NavBar from '../../components/NavBar/NavBar'
 
-export default function PostsComplaint() {
+export default function PostsPendent() {
   return (
     <div>
 
@@ -12,6 +12,7 @@ export default function PostsComplaint() {
       <div className="posts-complaint-container">
 
         <h1>Pendentes</h1>
+        <h2>Filtar</h2>
 
         <table>
           <tr className='title-table'>
@@ -29,7 +30,7 @@ export default function PostsComplaint() {
             <td>Low Profile</td>
             <td>12/06/2023</td>
             <td>22</td>
-            <button>Ver Post</button>
+            <td><button>Ver Post</button></td>
           </tr>
 
           <tr className='value-table'>
@@ -38,7 +39,7 @@ export default function PostsComplaint() {
             <td>Low Profile</td>
             <td>12/06/2023</td>
             <td>22</td>
-            <button>Ver Post</button>
+            <td><button>Ver Post</button></td>
           </tr>
 
           <tr className='value-table'>
@@ -47,7 +48,7 @@ export default function PostsComplaint() {
             <td>Low Profile</td>
             <td>12/06/2023</td>
             <td>22</td>
-            <button>Ver Post</button>
+            <td><button>Ver Post</button></td>
           </tr>
 
           <tr className='value-table'>
@@ -56,7 +57,7 @@ export default function PostsComplaint() {
             <td>Low Profile</td>
             <td>12/06/2023</td>
             <td>22</td>
-            <button>Ver Post</button>
+            <td><button>Ver Post</button></td>
           </tr>
 
         </table>

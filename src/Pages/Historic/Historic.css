@@ -1,0 +1,99 @@
+.filter-options-historic {
+    width: 200px;
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 10px;
+
+    background-color: #710383;
+
+    border-radius: 15px;
+
+    gap: 10px;
+
+    position: absolute;
+    top: 140px;
+    right: 5px;
+}
+
+.filter-options-historic h1{
+    color: #FFF;
+
+    font-size: 18px;
+}
+
+table {
+    width: 100%;
+}
+
+.title-table {
+    width: 100%;
+
+    background-color: #F8670E;
+}
+
+.title-table th {
+    color: #FFF;
+    text-align: center;
+
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+
+    padding: 10px;
+}
+
+.value-table {
+    width: 100%;
+
+    background-color: #FFF;
+}
+
+.value-table td{
+    color: #000;
+    text-align: center;
+
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+
+    height: 50px;
+}
+
+.value-table .ban-button{
+    width: 100px;
+
+    color: #FFF;
+
+    background-color: #DB3232;
+
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+
+    padding: 10px;
+    border-radius: 15px;
+
+    border: none;
+}
+
+.value-table .ignorate-button {
+    width: 100px;
+
+    color: #FFF;
+
+    background-color: #7B7B7B;
+
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+
+    padding: 10px;
+    border-radius: 15px;
+
+    border: none;
+}

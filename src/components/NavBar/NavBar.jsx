@@ -55,11 +55,10 @@ function Navbar() {
             <div className="pessoal-info-container">
 
               <div className="img-container" >
-                <img className="img" src="https://firebasestorage.googleapis.com/v0/b/tcc-firebase-c1952.appspot.com/o/profileImage%2F1684366290357%2F0.9513496802173749?alt=media&token=4ec2f388-5173-41e4-8f73-409c1b90e852" />
               </div>
 
               <div className="name-container">
-                <h1>Luis</h1>
+                <h1>Nome</h1>
               </div>
 
             </div>

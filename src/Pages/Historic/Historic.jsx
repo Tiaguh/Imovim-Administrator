@@ -1,10 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./Historic.css"
+
+import api from '../../services/api.js'
 
 import NavBar from '../../components/NavBar/NavBar';
 
 export default function Historic() {
   const [visibleFilter, setVisibleFilter] = useState(false);
+
+  const [reports, setReports] = useState([])
+
+  const getData = async () => {
+    const { data } = await api.get("/report/get-all-complaints")
+    setReports(data)
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
 
   return (
     <div>
@@ -66,23 +79,18 @@ export default function Historic() {
             <th>Status</th>
           </tr>
 
-          <tr className='value-table'>
-            <td>04</td>
-            <td>Tiaguh_</td>
-            <td>Low Profile</td>
-            <td>12/06/2023</td>
-            <td>22</td>
-            <td><button className='ignorate-button'>Ignorado</button></td>
-          </tr>
-
-          <tr className='value-table'>
-            <td>04</td>
-            <td>Tiaguh_</td>
-            <td>Low Profile</td>
-            <td>12/06/2023</td>
-            <td>22</td>
-            <td><button className='ban-button'>Banido</button></td>
-          </tr>
+          {reports.map((report, index) => {
+            return (
+              <tr className='value-table'>
+                <td>{report.user_id}</td>
+                <td>{report.nickname}</td>
+                <td>{report.motive}</td>
+                <td>{report.created_at.slice(0, 10)}</td>
+                <td>{report.qntd}</td>
+                <td><button className={report.status === 'ignored' ? "ignorate-button" : "ban-button"}>{report.status === 'ignored' ?  "Ignorado" : "Banido" }</button></td>
+              </tr>
+            )
+          })}
 
         </table>
 

@@ -1,14 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './PostsPendent.css';
 
 import NavBar from '../../components/NavBar/NavBar';
 import Modal from '../../components/Modal/Modal';
+
+import api from '../../services/api.js'
 
 export default function PostsPendent() {
   const [visible, setVisible] = useState(false);
   const [visibleFilter, setVisibleFilter] = useState(false);
 
   const [openModal, setOpenModal] = useState(false)
+
+  const [reports, setReports] = useState([])
+  
+  const getData = async () => {
+    const { data } = await api.get("/report/get-all-complaints")
+    setReports(data)
+  }
+
+  useEffect(()=> {
+    getData()
+  }, [])
 
   return (
     <div>
@@ -78,41 +91,18 @@ export default function PostsPendent() {
             <th></th>
           </tr>
 
-          <tr className='value-table'>
-            <td>04</td>
-            <td>Tiaguh_</td>
-            <td>Low Profile</td>
-            <td>12/06/2023</td>
-            <td>22</td>
-            <td><button onClick={() => setOpenModal(true)}>Ver Post</button></td>
-          </tr>
-
-          <tr className='value-table'>
-            <td>04</td>
-            <td>Tiaguh_</td>
-            <td>Low Profile</td>
-            <td>12/06/2023</td>
-            <td>22</td>
-            <td><button onClick={() => setOpenModal(true)}>Ver Post</button></td>
-          </tr>
-
-          <tr className='value-table'>
-            <td>04</td>
-            <td>Tiaguh_</td>
-            <td>Low Profile</td>
-            <td>12/06/2023</td>
-            <td>22</td>
-            <td><button onClick={() => setOpenModal(true)}>Ver Post</button></td>
-          </tr>
-
-          <tr className='value-table'>
-            <td>04</td>
-            <td>Tiaguh_</td>
-            <td>Low Profile</td>
-            <td>12/06/2023</td>
-            <td>22</td>
-            <td><button onClick={() => setOpenModal(true)}>Ver Post</button></td>
-          </tr>
+          {reports.map((report, index) => {
+            return (
+              <tr className='value-table'>
+                <td>{report.user_id}</td>
+                <td>{report.nickname}</td>
+                <td>{report.motive}</td>
+                <td>{ report.created_at.slice(0,10)}</td>
+                <td>{report.qntd}</td>
+                <td><button onClick={() => setOpenModal(true)}>Ver Post</button></td>
+              </tr>
+            )
+          })}
 
         </table>
 

@@ -8,18 +8,17 @@ import api from '../../services/api.js'
 
 export default function PostsPendent() {
   const [visible, setVisible] = useState(false);
-  const [visibleFilter, setVisibleFilter] = useState(false);
-
+  
   const [openModal, setOpenModal] = useState(false)
 
   const [reports, setReports] = useState([])
-  
+
   const getData = async () => {
     const { data } = await api.get("/report/get-all-complaints")
     setReports(data)
   }
 
-  useEffect(()=> {
+  useEffect(() => {
     getData()
   }, [])
 
@@ -54,31 +53,6 @@ export default function PostsPendent() {
 
           </div>
 
-          <div className='filter-container'>
-
-            <button onClick={() => setVisibleFilter(!visibleFilter)}>
-              <h2>Filtar</h2>
-            </button>
-
-            {visibleFilter && (
-              <div className='filter-options'>
-                <button>
-                  <h1>Mais recentes</h1>
-                </button>
-
-                <button>
-                  <h1>Mais antigas</h1>
-                </button>
-
-                <button>
-                  <h1>Mais denunciados</h1>
-                </button>
-
-              </div>
-            )}
-
-          </div>
-
         </div>
 
         <table>
@@ -97,7 +71,7 @@ export default function PostsPendent() {
                 <td>{report.user_id}</td>
                 <td>{report.nickname}</td>
                 <td>{report.motive}</td>
-                <td>{ report.created_at.slice(0,10)}</td>
+                <td>{report.created_at.slice(0, 10)}</td>
                 <td>{report.qntd}</td>
                 <td><button onClick={() => setOpenModal(true)}>Ver Post</button></td>
               </tr>

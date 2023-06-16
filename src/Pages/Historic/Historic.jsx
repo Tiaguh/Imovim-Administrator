@@ -43,25 +43,12 @@ export default function Historic() {
             {visibleFilter && (
               <div className='filter-options-historic'>
                 <button>
-                  <h1>Mais recentes</h1>
-                </button>
-
-                <button>
-                  <h1>Mais antigas</h1>
-                </button>
-
-                <button>
-                  <h1>Mais denunciados</h1>
-                </button>
-
-                <button>
                   <h1>Banidos</h1>
                 </button>
 
                 <button>
                   <h1>Ignorados</h1>
                 </button>
-
               </div>
             )}
 
@@ -87,7 +74,7 @@ export default function Historic() {
                 <td>{report.motive}</td>
                 <td>{report.created_at.slice(0, 10)}</td>
                 <td>{report.qntd}</td>
-                <td><button className={report.status === 'ignored' ? "ignorate-button" : "ban-button"}>{report.status === 'ignored' ?  "Ignorado" : "Banido" }</button></td>
+                <td><button className={report.status === 'ignored' ? "ignorate-button" : "ban-button"}>{report.status === 'ignored' ? "Ignorado" : "Banido"}</button></td>
               </tr>
             )
           })}
